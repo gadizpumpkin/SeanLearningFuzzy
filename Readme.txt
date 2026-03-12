@@ -17,7 +17,6 @@ AND persediaan SEDIKIT
 THEN produksi BERTAMBAH
 
 Setiap rule menghasilkan nilai crisp (angka).
-
 Input data
 ↓
 Fuzzifikasi
