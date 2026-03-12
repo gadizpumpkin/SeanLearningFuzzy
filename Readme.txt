@@ -17,3 +17,17 @@ AND persediaan SEDIKIT
 THEN produksi BERTAMBAH
 
 Setiap rule menghasilkan nilai crisp (angka).
+
+Input data
+↓
+Fuzzifikasi
+↓
+Evaluasi Rule
+↓
+Hitung α-predikat (MIN)
+↓
+Cari nilai z
+↓
+Defuzzifikasi
+↓
+Output
