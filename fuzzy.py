@@ -1,8 +1,35 @@
+<<<<<<< Updated upstream
 # Input
+=======
+# ============================================================
+# IMPLEMENTASI FUZZY LOGIC TSUKAMOTO
+# Menentukan kecepatan kipas berdasarkan suhu dan kelembapan
+# ============================================================
+
+
+# ------------------------------------------------------------
+# INPUT
+# ------------------------------------------------------------
+# Nilai suhu dalam satuan Celsius (°C)
+>>>>>>> Stashed changes
 suhu = 30
 kelembapan = 70
 
+<<<<<<< Updated upstream
 # FUZZIFIKASI SUHU
+=======
+
+# ------------------------------------------------------------
+# FUZZIFIKASI SUHU
+# ------------------------------------------------------------
+# Mengubah nilai suhu crisp menjadi derajat keanggotaan
+# pada himpunan fuzzy "Dingin".
+#
+# Aturan keanggotaan:
+# - Suhu <= 20°C       -> sepenuhnya Dingin (1)
+# - 20°C < suhu < 30°C -> derajat keanggotaan menurun linear
+# - Suhu >= 30°C       -> bukan Dingin (0)
+>>>>>>> Stashed changes
 def suhu_dingin(x):
     if x <= 20:
         return 1
@@ -19,7 +46,21 @@ def suhu_panas(x):
     else:
         return 1
 
+<<<<<<< Updated upstream
 # FUZZIFIKASI KELEMBAPAN
+=======
+
+# ------------------------------------------------------------
+# FUZZIFIKASI KELEMBAPAN
+# ------------------------------------------------------------
+# Mengubah nilai kelembapan crisp menjadi derajat keanggotaan
+# pada himpunan fuzzy "Rendah".
+#
+# Aturan keanggotaan:
+# - Kelembapan <= 40%       -> sepenuhnya Rendah (1)
+# - 40% < kelembapan < 60%  -> derajat keanggotaan menurun linear
+# - Kelembapan >= 60%       -> bukan Rendah (0)
+>>>>>>> Stashed changes
 def lembap_rendah(x):
     if x <= 40:
         return 1
@@ -36,14 +77,39 @@ def lembap_tinggi(x):
     else:
         return 1
 
+<<<<<<< Updated upstream
 # HITUNG NILAI FUZZY
+=======
+
+# ------------------------------------------------------------
+# HITUNG NILAI FUZZY
+# ------------------------------------------------------------
+# Menghitung derajat keanggotaan suhu terhadap:
+# - Dingin
+# - Panas
+>>>>>>> Stashed changes
 dingin = suhu_dingin(suhu)
 panas = suhu_panas(suhu)
 
 rendah = lembap_rendah(kelembapan)
 tinggi = lembap_tinggi(kelembapan)
 
+<<<<<<< Updated upstream
 # INFERENSI (MIN)
+=======
+
+# ------------------------------------------------------------
+# INFERENSI FUZZY
+# ------------------------------------------------------------
+# Metode MIN digunakan untuk menentukan nilai firing strength
+# (α-predicate) dari setiap aturan.
+#
+# Aturan 1:
+# IF suhu Dingin AND kelembapan Tinggi
+# THEN kipas Lambat
+#
+# Nilai z1 = 30 merupakan output crisp untuk kipas lambat.
+>>>>>>> Stashed changes
 a1 = min(dingin, tinggi)
 z1 = 30  # kipas lambat
 
